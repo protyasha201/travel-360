@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <nav className="navBar">
             <div className="headerIcon">
-                <h3><span className="text-coral">Travel</span><span className="text-white">360.</span></h3>
+                <h3><span className="text-coral">TRAVEL</span><span className="text-white">360.</span></h3>
             </div>
             <div className="navLinks">
                 <a className="links" href="#">Home</a>

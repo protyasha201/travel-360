@@ -1,0 +1,50 @@
+.aboutSection{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 150px 0;
+}
+
+.aboutImage{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(164, 158, 158);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+}
+.aboutImage img{
+    border: 10px solid white;
+    border-radius: 10px;
+}
+.aboutText{
+    width: 40%;
+}
+
+.aboutText h1{
+    font-size: 40px;
+}
+
+.aboutText h3{
+    font-weight: 400;
+    color: rgb(57, 57, 64);
+}
+
+.aboutText p{
+    color: rgb(103, 98, 98);
+}
+
+.findTourBtn{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: coral;
+    cursor: pointer;
+    transition: all .4s ease-out;
+}
+
+.findTourBtn:hover{
+    transform: translate(0, -4px);
+    box-shadow: 1px 1px 5px black;
+}

@@ -34,7 +34,7 @@ const specials = [
 const Specials = () => {
     return (
         <section className="specialsSection">
-            <h4 className="text-grey text-center">Travel360 Specials</h4>
+            <h4 className="text-grey text-center">TRAVEL360 SPECIALS</h4>
             <h1 className="text-center text-bluish">Why Travel with Travel360?</h1>
             <div className="specialsContainer">
                 {

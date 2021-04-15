@@ -1,0 +1,87 @@
+.contact{
+    background: url('../../../images/blackBg.jpg');
+    background-size: cover;
+    height: 550px;
+    position: relative;
+    top: 20px;
+}
+
+.contactInfo{
+    color: white;
+    display: flex;
+    padding: 100px;
+    margin: 100px 0;
+    justify-content: space-around;
+}
+
+.firstPart h1{
+    font-size: 40px;
+}
+
+.firstPart{
+    width: 25%;
+}
+
+.secondPart{
+    width: 8%;
+}
+
+.servicesLinks{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.iconContainer{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.contactIcons{
+    border: 1px solid white;
+    border-radius: 100%;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.contactIcons:hover{
+    transform: translate(0, -3px);
+    background-color: white;
+    color: cornflowerblue;
+}
+
+.servicesLinks .footerLinks{
+    width: 95px;
+    color: rgb(105, 144, 235);
+    transition: ease-out .4s all;
+    padding: 5px;
+}
+
+.servicesLinks .footerLinks:hover{
+    border-left: 1px solid white;
+    border-right: 1px solid green;
+    color: white;
+}
+
+.photosContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.photosContainer img{
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.photosContainer img:hover{
+    opacity: .5;
+}
+
+.extraIcons{
+    margin-right: 10px;
+}
