@@ -1,0 +1,36 @@
+.headerContainer{
+    background-image: url('../../../images/travel2.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 720px;
+}
+.headerTexts{
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+.headerTexts h1{
+    font-size: 50px;
+    color: white;
+}
+
+.bookBtn{
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: black;
+    padding-inline-end: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    transition: all ease-out .5s;
+}
+
+.bookBtn:hover{
+    transform: translate(0, -3px);
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 10px black;
+}

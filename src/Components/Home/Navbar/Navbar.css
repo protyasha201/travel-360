@@ -1,0 +1,40 @@
+a{
+    text-decoration: none;
+}
+
+.headerIcon{
+    width: 20%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar{
+    justify-content: space-around;
+    display: flex;
+}
+
+.headerIcon h3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+}
+
+.navLinks{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links{
+    color: white;
+    transition: .4s all ease-in-out;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.links:hover{
+    background-color: cornflowerblue;
+}
