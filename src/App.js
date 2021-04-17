@@ -16,7 +16,7 @@ function App() {
     email: '',
     imageUrl: '',
     isLoggedIn: false,
-    isAdmin: true
+    isAdmin: false
   });
 
   return (
@@ -29,9 +29,12 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route exact path="/dashboard">
+          <PrivateRoute exact path="/dashboard">
             <Dashboard />
-          </Route>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/bookTravel/:id">
+            <Dashboard />
+          </PrivateRoute>
           <Route path="/services">
             <Services />
           </Route>

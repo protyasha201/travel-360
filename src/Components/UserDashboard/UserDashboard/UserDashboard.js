@@ -13,13 +13,16 @@ const UserDashboard = () => {
                 <Route exact path="/dashboard">
                     <BookTravel />
                 </Route>
-                <Route path="/dashboard/bookTravel">
+                <Route path="/dashboard/bookTravel/:id">
                     <BookTravel />
                 </Route>
-                <Route path="/dashboard/userReview">
+                <Route exact path="/dashboard/bookTravel">
+                    <BookTravel />
+                </Route>
+                <Route  path="/dashboard/userReview">
                     <Review />
                 </Route>
-                <Route path="/dashboard/allBookings">
+                <Route  path="/dashboard/allBookings">
                     <AllBookings />
                 </Route>
             </Switch>

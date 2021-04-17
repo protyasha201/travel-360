@@ -1,0 +1,23 @@
+.testimonials{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-self: center;
+    justify-items: center;
+    row-gap: 50px;
+    text-align: center;
+}
+
+.testimonialsSection{
+    margin: 200px 0;
+}
+
+.testimonialsContainer{
+    box-shadow: 1px 1px 5px grey;
+    width: 300px;
+    padding: 5px;
+}
+
+.testimonialsContainer img{
+    width: 100%;
+    height: 250px;
+}

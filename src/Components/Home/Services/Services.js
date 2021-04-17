@@ -12,31 +12,25 @@ const Services = () => {
     }, [])
 
     const history = useHistory();
-    
+
     const bookTravel = id => {
-        history.push(`/dashboard`);
+        history.push(`/dashboard/bookTravel/${id}`);
     }
 
     return (
         <section className="servicesSection">
-            <h2 className="text-center text-bluish">Travel Services</h2>
+            <h2 className="text-center text-bluish">Travelling Services</h2>
             <div className="services">
                 {
-                    services.map(service => <div key={service._id} className="servicesContainer">
-                        <img src={service.imageUrl} />
+                    services.map(service => <div onClick={bookTravel} key={service._id} className="servicesContainer">
+                        <div className="imageContainer">
+                            <img src={service.imageUrl} />
+                        </div>
                         <h1>{service.title}</h1>
                         <p>{service.description}</p>
                         <div className="d-flex justify-content-space align-items-center">
                             <h4>${service.price}</h4>
-                            <button style={{
-                                height: '40px',
-                                backgroundColor: 'coral',
-                                border: 'none',
-                                borderRadius: '5px',
-                                cursor: 'pointer',
-                                fontSize: '20px',
-                                color: 'white'
-                            }} onClick={() => bookTravel(service._id)}>Book Travel</button>
+                            <button className="bookTravelBtn" onClick={() => bookTravel(service._id)}>Book Travel</button>
                         </div>
                     </div>)
                 }

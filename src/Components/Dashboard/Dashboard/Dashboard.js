@@ -9,7 +9,7 @@ const Dashboard = () => {
     return (
         <section>
             {
-                user.isAdmin ? <Admin /> : <UserDashboard />
+                user.isAdmin ? <Admin />:<UserDashboard />
             }
         </section>
     );

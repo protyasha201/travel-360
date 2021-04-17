@@ -1,25 +1,48 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 import './Review.css';
 
 const Review = () => {
     const [user] = useContext(UserContext);
+    const [reviews, setReviews] = useState({
+        name: '',
+        imgUrl: user.imageUrl,
+        description: ''
+    });
+
+    const handleBlur = e => {
+        const reviewsInfo = { ...reviews };
+
+        reviewsInfo[e.target.name] = e.target.value;
+
+        setReviews(reviewsInfo);
+    }
+
+    const submitReview = () => {
+        fetch('http://localhost:5000/addReview', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(reviews)
+        })
+            .then(res => res.json())
+            .then(result => console.log(result))
+
+        alert('Review Added Successfully');
+    }
 
     return (
         <section className="reviewSection">
             <div className="review">
                 <div className="reviewHeader">
-                    <h1>BOOK</h1>
+                    <h1>Review</h1>
                     <h1>{user.name}</h1>
                 </div>
                 <div className="reviewMain">
                     <p>Name</p>
-                    <input type="text" placeholder="Name..." name="name" />
-                    <p>Company or Team Name</p>
-                    <input type="text" placeholder="Team Name" name="teamName" />
+                    <input onBlur={handleBlur} type="text" placeholder="Name..." name="name" />
                     <p>Description</p>
-                    <textarea style={{height:'200px', width: '60%', borderRadius: '10px'}} placeholder="write your review here..." />
-                    <button className="reviewSubmit">Submit Review</button>
+                    <textarea onBlur={handleBlur} name="description" style={{ height: '200px', width: '60%', borderRadius: '10px' }} placeholder="write your review here..." />
+                    <button onClick={submitReview} className="reviewSubmit">Submit Review</button>
                 </div>
             </div>
         </section>

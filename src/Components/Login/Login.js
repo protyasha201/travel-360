@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Login.css';
 import image from '../../images/loginBg.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -27,16 +27,15 @@ const Login = () => {
         firebase.auth()
             .signInWithPopup(provider)
             .then((result) => {
-                const user = result.user;
+                const newUser = result.user;
 
-                const newUser = {
-                    name: user.displayName,
-                    email: user.email,
-                    imgUrl: user.photoURL,
-                    isLoggedIn: true,
-                }
+                const userInfoUpdate = {...user}
+                userInfoUpdate.name = newUser.displayName;
+                userInfoUpdate.email = newUser.email;
+                userInfoUpdate.imageUrl = newUser.photoURL;
+                userInfoUpdate.isLoggedIn = true;
 
-                setUser(newUser);
+                setUser(userInfoUpdate);
                 history.replace(from);
 
             }).catch((error) => {

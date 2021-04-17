@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer';
 import HeaderMain from '../HeaderMain/HeaderMain';
 import Services from '../Services/Services';
 import Specials from '../Specials/Specials';
+import Testimonials from '../Testimonials/Testimonials';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Specials />
             <About />
             <Services />
+            <Testimonials />
             <Contact />
             <Footer />
         </div>
