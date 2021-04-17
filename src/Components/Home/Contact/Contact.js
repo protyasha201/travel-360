@@ -9,25 +9,32 @@ import gallery4 from '../../../images/gallery4.jpg';
 import gallery5 from '../../../images/gallery5.jpg';
 import gallery6 from '../../../images/gallery6.jpg';
 import { faEnvelope, faMapMarkedAlt, faMicrophone } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const gallery = [
     {
-        img: gallery1
+        img: gallery1,
+        id:1
     },
     {
-        img: gallery2
+        img: gallery2,
+        id:2
     },
     {
-        img: gallery3
+        img: gallery3,
+        id:3
     },
     {
-        img: gallery4
+        img: gallery4,
+        id:4
     },
     {
-        img: gallery5
+        img: gallery5,
+        id:5
     },
     {
-        img: gallery6
+        img: gallery6,
+        id:6
     },
 ];
 
@@ -50,18 +57,18 @@ const Contact = () => {
                 <div className="secondPart">
                     <h2>Services</h2>
                     <div className="servicesLinks">
-                        <a className="footerLinks" href="#">About Us</a>
-                        <a className="footerLinks" href="#">How It Works</a>
-                        <a className="footerLinks" href="#">Our Blog</a>
-                        <a className="footerLinks" href="#">Our Services</a>
-                        <a className="footerLinks" href="#">Contact Us</a>
+                        <Link to="/" className="footerLinks" href="#">About Us</Link>
+                        <Link to="/" className="footerLinks" href="#">How It Works</Link>
+                        <Link to="/" className="footerLinks" href="#">Our Blog</Link>
+                        <Link to="/" className="footerLinks" href="#">Our Services</Link>
+                        <Link to="/" className="footerLinks" href="#">Contact Us</Link>
                     </div>
                 </div>
                 <div className="gallery">
                     <h2>Gallery</h2>
                     <div className="photosContainer">
                         {
-                            gallery.map(photos => <img src={photos.img}/>)
+                            gallery.map(photos => <img alt="gallery" key={photos.id} src={photos.img}/>)
                         }
                     </div>
                 </div>

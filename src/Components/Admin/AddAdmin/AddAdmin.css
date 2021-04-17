@@ -1,0 +1,44 @@
+.addAdminSection{
+    display: flex;
+
+}
+.addAdmin{
+    width: 70%;
+    position: absolute;
+    right: 100px;
+}
+
+.addAdminHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.addAdminMain{
+    width: 100%;
+    background-color: rgb(102, 180, 220);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.addAdminMain p{
+    color: rgb(54, 49, 49);
+}
+
+.addAdminMain input{
+    font-size: 20px;
+    border-radius: 5px;
+    height: 40px;
+    border:none;
+    width: 400px;
+}
+
+.addAdminBtn{
+    height: 40px;
+    padding: 10px;
+    background-color: coral;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 100px;
+    border-radius: 5px;
+}

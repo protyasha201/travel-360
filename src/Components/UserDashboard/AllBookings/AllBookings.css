@@ -1,0 +1,34 @@
+.allBookingsHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.allBookings{
+    width: 70%;
+    position: absolute;
+    right: 100px;
+}
+
+.allBookingsMain{
+    background-color: rgb(227, 228, 230);
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bookings{
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.headBookings{
+    display: flex;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: space-between;
+}

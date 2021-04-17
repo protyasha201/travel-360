@@ -1,0 +1,38 @@
+.bookingSection{
+    display: flex;
+
+}
+.manageService{
+    width: 70%;
+    position: absolute;
+    right: 100px;
+}
+
+.manageServiceHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.manageServiceMain{
+    width: 100%;
+    background-color: rgb(102, 180, 220);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.tableHeader{
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    justify-content: space-around;
+    color: rgb(140, 136, 136);
+}
+
+.manageServiceContainer{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    justify-content: space-around;
+}

@@ -1,0 +1,33 @@
+.bookingSection{
+    display: flex;
+
+}
+.book{
+    width: 70%;
+    position: absolute;
+    right: 100px;
+}
+
+.bookHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookMain{
+    width: 100%;
+    background-color: rgb(102, 180, 220);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.bookMain p{
+    color: rgb(54, 49, 49);
+}
+
+.bookMain input{
+    font-size: 20px;
+    border-radius: 5px;
+    height: 40px;
+    border:none;
+    width: 400px;
+}

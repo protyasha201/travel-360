@@ -1,0 +1,54 @@
+.uploadContainer label{
+    background-color: rgb(56, 37, 56);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+.addServiceSection{
+    display: flex;
+
+}
+.addService{
+    width: 70%;
+    position: absolute;
+    right: 100px;
+}
+
+.bookHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.addServiceMain{
+    width: 100%;
+    background-color: rgb(217, 219, 220);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.addServiceMain p{
+    color: rgb(54, 49, 49);
+}
+
+.addServiceMain input{
+    font-size: 20px;
+    border-radius: 5px;
+    height: 40px;
+    border:none;
+    width: 400px;
+}
+
+.addServiceBtn{
+    position: relative;
+    left: 900px;
+    height: 40px;
+    background-color: coral;
+    color: white;
+    border-radius: 5px;
+    width: 120px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}

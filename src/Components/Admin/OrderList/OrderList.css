@@ -1,0 +1,49 @@
+.bookingSection{
+    display: flex;
+
+}
+.orders{
+    width: 70%;
+    position: absolute;
+    right: 100px;
+}
+
+.ordersHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ordersMain{
+    width: 100%;
+    background-color: rgb(102, 180, 220);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.tableHeader{
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    justify-content: space-around;
+    color: rgb(140, 136, 136);
+}
+
+.ordersContainer{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+
+
+.selectStatus{
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    background-color: rgb(183, 177, 247);
+}

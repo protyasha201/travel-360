@@ -1,0 +1,33 @@
+.sideNav{
+    background-color: rgb(62, 62, 71);
+    height: 721px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+}
+.adminSidebar, .userSidebar{
+    display: flex;
+    flex-direction: column;
+}
+.tittle{
+    font-size: 40px;
+}
+
+.sideLinks{
+    color: rgb(173, 179, 206);
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.sideLinks:hover{
+    background-color: white;
+    color: rgb(69, 67, 67);
+    transform: translate(0, -3px);
+}

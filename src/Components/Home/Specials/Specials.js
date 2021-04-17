@@ -8,6 +8,7 @@ import { faGrinStars, faHandshake, faUserShield } from '@fortawesome/free-solid-
 import { faSlideshare } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
 const specials = [
     {
         img: guide,
@@ -39,8 +40,8 @@ const Specials = () => {
             <div className="specialsContainer">
                 {
                     specials.map(items => 
-                    <div className="travelSpecials">
-                        <img src={items.img} />
+                    <div className="travelSpecials" key={items.title}>
+                        <img alt={items.title} src={items.img} />
                         <FontAwesomeIcon className="specialsIcon" icon={items.icon} />
                         <h3 className="text-grey">{items.title}</h3>
                     </div>)

@@ -1,0 +1,52 @@
+.reviewSection{
+    display: flex;
+
+}
+.review{
+    width: 70%;
+    position: absolute;
+    right: 100px;
+}
+
+.reviewHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviewMain{
+    width: 100%;
+    background-color: rgb(197, 185, 245);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewMain p{
+    color: rgb(54, 49, 49);
+}
+
+.reviewMain input{
+    font-size: 20px;
+    border-radius: 5px;
+    height: 40px;
+    border:none;
+    width: 400px;
+}
+
+.reviewSubmit{
+    width: 150px;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    background-color: crimson;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all .4s ease-out;
+}
+
+.reviewSubmit:hover{
+    background-color: black;
+}

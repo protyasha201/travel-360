@@ -11,13 +11,12 @@
     position: relative;
     right: 400px;
     top: 100px;
-    border: 1px solid black;
     height: 350px;
     border-radius: 5px;
     width: 250px;
     text-align: center;
     padding: 10px;
-    box-shadow: 1px 1px 10px black;
+    box-shadow: 1px 1px 5px black;
     background-color: white;
 }
 
