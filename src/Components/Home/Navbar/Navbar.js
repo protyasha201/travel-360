@@ -14,8 +14,8 @@ const Navbar = () => {
             <div className="navLinks">
                 <Link className="links" to="/">Home</Link>
                 <Link className="links" to="/dashboard">Admin</Link>
-                <Link className="links" to="/">Blogs</Link>
-                <Link className="links" to="/">Services</Link>
+                <Link className="links" to="/blogs">Blogs</Link>
+                <Link className="links" to="/services">Services</Link>
                 {
                     user.isLoggedIn ?
                         <img alt="user" style={{height: '70px', borderRadius: '100%'}} src={user.imgUrl} />

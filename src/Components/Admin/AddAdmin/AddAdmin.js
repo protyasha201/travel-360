@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AddAdmin.css';
 
 const AddAdmin = () => {
+    const [admin, setAdmin] = useState({
+        email: '',
+    })
+    const handleBlur = e => {
+        const adminInfo = {
+            email: e.target.value
+        };
+        setAdmin(adminInfo)
+    }
+    const addAdmin = () => {
+        fetch('http://localhost:5000/addAdmins', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(admin)
+        })
+            .then(res => res.json())
+            .then(result => console.log(result))
+        
+            alert('Admin Addeed');
+    }
     return (
         <section className="addAdminSection">
             <div className="addAdmin">
@@ -11,8 +31,8 @@ const AddAdmin = () => {
                 </div>
                 <div className="addAdminMain">
                     <p>Email</p>
-                    <input type="text" placeholder="dummy@gmail.com" name="email" />
-                    <button className="addAdminBtn">Add Admin</button>
+                    <input onBlur={handleBlur} type="text" placeholder="dummy@gmail.com" name="email" />
+                    <button onClick={addAdmin} className="addAdminBtn">Add Admin</button>
                 </div>
             </div>
         </section>

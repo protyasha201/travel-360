@@ -15,7 +15,7 @@ const SideNav = () => {
                 <span className="text-white">360</span>
             </h1>
             {
-                user.email === "protyasha0999@gmail.com" ?
+                user.isAdmin ?
                     <div className="adminSidebar">
                         <Link to="/dashboard/orderList" className="sideLinks"><FontAwesomeIcon icon={faRoute} />Travel Bookings</Link>
                         <Link to="/dashboard/addService" className="sideLinks"><FontAwesomeIcon icon={faPlus} />Add Service</Link>

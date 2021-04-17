@@ -1,8 +1,10 @@
 import React, { createContext, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Blogs from './Components/Blogs/Blogs';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import Home from './Components/Home/Home/Home';
+import Services from './Components/Home/Services/Services';
 import Login from './Components/Login/Login';
 import PrivateRoute from './Components/Login/PrivateRoute';
 
@@ -13,7 +15,8 @@ function App() {
     name: '',
     email: '',
     imageUrl: '',
-    isLoggedIn: false
+    isLoggedIn: false,
+    isAdmin: true
   });
 
   return (
@@ -26,9 +29,15 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <PrivateRoute path="/dashboard">
+          <Route exact path="/dashboard">
             <Dashboard />
-          </PrivateRoute>
+          </Route>
+          <Route path="/services">
+            <Services />
+          </Route>
+          <Route path="/blogs">
+            <Blogs />
+          </Route>
         </Switch>
       </Router>
     </UserContext.Provider>

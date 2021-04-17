@@ -1,0 +1,23 @@
+.services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-self: center;
+    justify-items: center;
+}
+
+.servicesContainer{
+    box-shadow: 1px 1px 5px black;
+    width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.servicesContainer h1{
+    color: grey;
+}
+
+.servicesContainer p{
+    color: rgb(121, 93, 93);
+}
+.servicesContainer img{
+    width: 100%;
+}

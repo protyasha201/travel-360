@@ -1,11 +1,18 @@
 import { faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 import './ManageService.css';
 
 const ManageService = () => {
     const [user] = useContext(UserContext);
+    const [services, setServices] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/services')
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, [])
 
     return (
         <section className="mangeServiceSection">
@@ -21,12 +28,14 @@ const ManageService = () => {
                         <p>View</p>
                         <p>Delete</p>
                     </div>
-                    <div className="manageServiceContainer">
-                        <h4>New York City Tour</h4>
-                        <h4>$340</h4>
-                        <FontAwesomeIcon style={{marginRight: '45px', cursor: 'pointer'}} icon={faEye} />
-                        <FontAwesomeIcon style={{marginRight: '20px', cursor: 'pointer'}} icon={faTrashAlt} />
-                    </div>
+                    {
+                        services.map(service => <div key={service._id} className="manageServiceContainer">
+                            <h4>{service.title}</h4>
+                            <h4>${service.price}</h4>
+                            <FontAwesomeIcon style={{ marginRight: '45px', cursor: 'pointer' }} icon={faEye} />
+                            <FontAwesomeIcon style={{ marginRight: '20px', cursor: 'pointer' }} icon={faTrashAlt} />
+                        </div>)
+                    }
                 </div>
             </div>
         </section>

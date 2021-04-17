@@ -9,7 +9,7 @@ const Dashboard = () => {
     return (
         <section>
             {
-                user.email === "protyasha0999@gmail.com" ? <Admin /> : <UserDashboard />
+                user.isAdmin ? <Admin /> : <UserDashboard />
             }
         </section>
     );

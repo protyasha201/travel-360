@@ -1,10 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 import { UserContext } from '../../../App';
 import './BookTravel.css';
 
 const BookTravel = () => {
     const [user] = useContext(UserContext);
+    const [selectedTravel, setSelectedTravel] = useState([]);
 
+    // useEffect(() => {
+    //     fetch(``)
+    // })
     return (
         <section className="bookingSection">
             <div className="book">

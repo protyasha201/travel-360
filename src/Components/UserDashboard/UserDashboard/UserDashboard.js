@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch, useParams } from 'react-router-dom';
 import SideNav from '../../Shared/SideNav/SideNav';
 import AllBookings from '../AllBookings/AllBookings';
 import BookTravel from '../BookTravel/BookTravel';
@@ -11,7 +11,7 @@ const UserDashboard = () => {
             <SideNav />
             <Switch>
                 <Route exact path="/dashboard">
-                    <AllBookings />
+                    <BookTravel />
                 </Route>
                 <Route path="/dashboard/bookTravel">
                     <BookTravel />
