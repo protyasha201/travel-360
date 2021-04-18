@@ -12,6 +12,16 @@ import { useHistory, useLocation } from 'react-router';
 
 const Login = () => {
     const [user, setUser] = useContext(UserContext);
+    const [admins, setAdmins] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/admins')
+        .then(res => res.json())
+        .then(data => setAdmins(data))
+    },[])
+
+    // console.log(admins);
+    // console.log(user);
 
     let history = useHistory();
     let location = useLocation();
@@ -34,6 +44,15 @@ const Login = () => {
                 userInfoUpdate.email = newUser.email;
                 userInfoUpdate.imageUrl = newUser.photoURL;
                 userInfoUpdate.isLoggedIn = true;
+
+                const admin = admins.filter(admin => newUser.email === admin.email);
+
+                if(admin[0].email === newUser.email) {
+                    userInfoUpdate.isAdmin = true;
+                }
+                else{
+                    userInfoUpdate.isAdmin = false;
+                }
 
                 setUser(userInfoUpdate);
                 history.replace(from);

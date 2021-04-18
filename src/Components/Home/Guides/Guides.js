@@ -35,7 +35,7 @@ const Guides = () => {
             <div className="guides">
                 {
                     guides.map(guide => 
-                    <div className="guidesContainer">
+                    <div key={guide.name} className="guidesContainer">
                         <img src={guide.img} alt={guide.name} />
                         <h1 className="text-coral">{guide.name}</h1>
                         <p className="text-grey">{guide.about}</p>

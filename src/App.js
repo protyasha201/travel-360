@@ -16,7 +16,7 @@ function App() {
     email: '',
     imageUrl: '',
     isLoggedIn: false,
-    isAdmin: true
+    isAdmin: false
   });
 
   return (
