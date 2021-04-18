@@ -1,0 +1,30 @@
+[debug] [2021-04-18T11:33:23.548Z] ----------------------------------------------------------------------
+[debug] [2021-04-18T11:33:23.578Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-04-18T11:33:23.579Z] CLI Version:   9.10.0
+[debug] [2021-04-18T11:33:23.579Z] Platform:      win32
+[debug] [2021-04-18T11:33:23.579Z] Node Version:  v14.15.3
+[debug] [2021-04-18T11:33:23.859Z] Time:          Sun Apr 18 2021 17:33:23 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-04-18T11:33:23.859Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-04-18T11:33:23.899Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-18T11:33:23.900Z] > authorizing via signed-in user (protyasha0999@gmail.com)
+[debug] [2021-04-18T11:33:23.901Z] [iam] checking project travel-360-81e93 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-04-18T11:33:23.966Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-18T11:33:23.966Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-18T11:33:35.507Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-04-18T11:33:35.519Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/travel-360-81e93 [none]
+[debug] [2021-04-18T11:33:35.535Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/travel-360-81e93
+[debug] [2021-04-18T11:33:35.570Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/travel-360-81e93
+    at Client.doRequest (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:211:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Client.request (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:66:9)
+    at async C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:169:17
+[error] 
+[error] Error: Failed to get Firebase project travel-360-81e93. Please make sure the project exists and your account has permission to access it.
