@@ -14,6 +14,16 @@ const ManageService = () => {
             .then(data => setServices(data))
     }, [])
 
+    const deleteService = id => {
+        fetch(`http://localhost:5000/delete/${id}`, {
+            method: "DELETE"
+        })
+            .then(res => res.json())
+            .then(result => {
+                
+            })
+            alert('Deleted successfully')
+    }
     return (
         <section className="mangeServiceSection">
             <div className="manageService">
@@ -33,7 +43,7 @@ const ManageService = () => {
                             <h4>{service.title}</h4>
                             <h4>${service.price}</h4>
                             <FontAwesomeIcon style={{ marginRight: '45px', cursor: 'pointer' }} icon={faEye} />
-                            <FontAwesomeIcon style={{ marginRight: '20px', cursor: 'pointer' }} icon={faTrashAlt} />
+                            <FontAwesomeIcon style={{ marginRight: '20px', cursor: 'pointer' }} onClick={() => deleteService(service._id)} icon={faTrashAlt} />
                         </div>)
                     }
                 </div>

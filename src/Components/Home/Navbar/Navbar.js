@@ -18,7 +18,7 @@ const Navbar = () => {
                 <Link className="links" to="/services">Services</Link>
                 {
                     user.isLoggedIn ?
-                        <img alt="user" style={{height: '70px', borderRadius: '100%'}} src={user.imgUrl} />
+                        <h1 className="text-bluish">{user.name}</h1>
                         :
                         <Link className="links bg-coral" to="/login">Login</Link>
                 }

@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
 import './OrderList.css';
 
 const OrderList = () => {
+    const [orderedBookings, setOrderedBookings] = useState([]);
+    const [user] = useContext(UserContext);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/orderedBookings')
+            .then(res => res.json())
+            .then(data => setOrderedBookings(data))
+    }, [])
+
     return (
         <section className="orderList">
             <div className="orders">
                 <div className="ordersHeader">
                     <h1>Order List</h1>
-                    <h1>Sufi Ahmed</h1>
+                    <h1>{user.name}</h1>
                 </div>
                 <div className="ordersMain">
                     <div className="tableHeader">
@@ -17,50 +27,19 @@ const OrderList = () => {
                         <p>Pay With</p>
                         <p>Status</p>
                     </div>
-                    <div className="ordersContainer">
-                        <h4>Anika Ahmed</h4>
-                        <h4>anika@gmail.com</h4>
-                        <h4>New York City Tour</h4>
-                        <h4>Credit Card</h4>
-                        <select className="selectStatus">
-                            <option name="pending">Pending</option>
-                            <option name="Done">Done</option>
-                            <option name="onGoing">On going</option>
-                        </select>
-                    </div>
-                    <div className="ordersContainer">
-                        <h4>Anika Ahmed</h4>
-                        <h4>anika@gmail.com</h4>
-                        <h4>New York City Tour</h4>
-                        <h4>Credit Card</h4>
-                        <select className="selectStatus">
-                            <option name="pending">Pending</option>
-                            <option name="Done">Done</option>
-                            <option name="onGoing">On going</option>
-                        </select>
-                    </div>
-                    <div className="ordersContainer">
-                        <h4>Anika Ahmed</h4>
-                        <h4>anika@gmail.com</h4>
-                        <h4>New York City Tour</h4>
-                        <h4>Credit Card</h4>
-                        <select className="selectStatus">
-                            <option name="pending">Pending</option>
-                            <option name="Done">Done</option>
-                            <option name="onGoing">On going</option>
-                        </select>
-                    </div>
-                    <div className="ordersContainer">
-                        <h4>Anika Ahmed</h4>
-                        <h4>anika@gmail.com</h4>
-                        <h4>New York City Tour</h4>
-                        <h4>Credit Card</h4>
-                        <select className="selectStatus">
-                            <option name="pending">Pending</option>
-                            <option name="Done">Done</option>
-                            <option name="onGoing">On going</option>
-                        </select>
-                    </div>
+                    {
+                        orderedBookings.map(bookings => <div className="ordersContainer" key={bookings._id}>
+                            <h4>{bookings.name}</h4>
+                            <h4>{bookings.email}</h4>
+                            <h4>{bookings.title}</h4>
+                            <h4>Credit Card</h4>
+                            <select className="selectStatus">
+                                <option name="pending">Pending</option>
+                                <option name="Done">Done</option>
+                                <option name="onGoing">On going</option>
+                            </select>
+                        </div>)
+                    }
                 </div>
             </div>
         </section>

@@ -1,11 +1,19 @@
 import { faGgCircle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 import './AllBookings.css';
 
 const AllBookings = () => {
     const [user] = useContext(UserContext);
+
+    const [bookings, setBookings] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/myBookings?email=${user.email}`)
+            .then(res => res.json())
+            .then(data => setBookings(data))
+    }, [user.email])
 
     return (
         <section className="allBookingsSection">
@@ -15,46 +23,18 @@ const AllBookings = () => {
                     <h1>{user.name}</h1>
                 </div>
                 <div className="allBookingsMain">
-                    <div className="bookings">
-                        <div className="headBookings">
-                            <FontAwesomeIcon style={{ fontSize: '50px' }} icon={faGgCircle} />
-                            <h4 style={{ backgroundColor: 'coral', padding: '10px' }}>Pending</h4>
-                        </div>
-                        <div>
-                            <h2>Anti Face Treatment</h2>
-                            <p>lorem ipsum something bla bla and never gonna push this finger hah ha wow . </p>
-                        </div>
-                    </div>
-                    <div className="bookings">
-                        <div className="headBookings">
-                            <FontAwesomeIcon style={{ fontSize: '50px' }} icon={faGgCircle} />
-                            <h4 style={{ backgroundColor: 'coral', padding: '10px' }}>Pending</h4>
-                        </div>
-                        <div>
-                            <h2>Anti Face Treatment</h2>
-                            <p>lorem ipsum something bla bla and never gonna push this finger hah ha wow . </p>
-                        </div>
-                    </div>
-                    <div className="bookings">
-                        <div className="headBookings">
-                            <FontAwesomeIcon style={{ fontSize: '50px' }} icon={faGgCircle} />
-                            <h4 style={{ backgroundColor: 'coral', padding: '10px' }}>Pending</h4>
-                        </div>
-                        <div>
-                            <h2>Anti Face Treatment</h2>
-                            <p>lorem ipsum something bla bla and never gonna push this finger hah ha wow . </p>
-                        </div>
-                    </div>
-                    <div className="bookings">
-                        <div className="headBookings">
-                            <FontAwesomeIcon style={{ fontSize: '50px' }} icon={faGgCircle} />
-                            <h4 style={{ backgroundColor: 'coral', padding: '10px' }}>Pending</h4>
-                        </div>
-                        <div>
-                            <h2>Anti Face Treatment</h2>
-                            <p>lorem ipsum something bla bla and never gonna push this finger hah ha wow . </p>
-                        </div>
-                    </div>
+                    {
+                        bookings.map(booking => <div className="bookings" key={booking._id}>
+                            <div className="headBookings">
+                                <FontAwesomeIcon style={{ fontSize: '50px' }} icon={faGgCircle} />
+                                <h4 style={{ backgroundColor: 'coral', padding: '10px' }}>Pending</h4>
+                            </div>
+                            <div>
+                                <h2>{booking.title}</h2>
+                                <p>{booking.description}</p>
+                            </div>
+                        </div>)
+                    }
                 </div>
             </div>
         </section>
