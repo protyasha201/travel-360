@@ -50,3 +50,23 @@
 .reviewSubmit:hover{
     background-color: black;
 }
+.reviewArea{
+    height: 200px;
+    width: 60%;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .review{
+        margin-top: 400px;
+    }
+    .reviewMain input{
+        width: 90%;
+    }
+    .reviewMain textarea{
+        width: 400px;
+    }
+    .reviewMain .reviewArea{
+        width: 200px;
+    }
+}

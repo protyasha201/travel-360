@@ -21,3 +21,9 @@
     width: 100%;
     height: 250px;
 }
+
+@media screen and (max-width: 500px) {
+    .testimonials{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -52,3 +52,20 @@
     font-size: 20px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 500px) {
+    .addService{
+        width: 80%;
+        top: 400px;
+        left: 20px;
+    }
+    .addServiceMain input{
+        width: 90%;
+    }
+    .addServiceBtn{
+        left: 280px;
+    }
+    .addServiceMain{
+        padding:20;
+    }
+}

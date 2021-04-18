@@ -37,8 +37,6 @@
     justify-content: space-around;
 }
 
-
-
 .selectStatus{
     height: 40px;
     border: none;
@@ -46,4 +44,21 @@
     color: white;
     font-size: 15px;
     background-color: rgb(183, 177, 247);
+}
+
+@media screen and (max-width: 500px) {
+    .orders{
+        width: 80%;
+        top: 400px;
+        left: 20px;
+    }
+    .tableHeader{
+        display: none;
+    }
+
+    .ordersContainer{
+        flex-direction: column;
+        padding: 20px;
+        margin: 40px;
+    }
 }

@@ -41,7 +41,11 @@ const Review = () => {
                     <p>Name</p>
                     <input onBlur={handleBlur} type="text" placeholder="Name..." name="name" />
                     <p>Description</p>
-                    <textarea onBlur={handleBlur} name="description" style={{ height: '200px', width: '60%', borderRadius: '10px' }} placeholder="write your review here..." />
+                    <textarea style={{
+                        width: '60%',
+                        height: '200px',
+                        borderRadius: '10px'
+                    }} onBlur={handleBlur} name="description" placeholder="write your review here..." />
                     <button onClick={submitReview} className="reviewSubmit">Submit Review</button>
                 </div>
             </div>

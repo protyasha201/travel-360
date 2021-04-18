@@ -6,6 +6,7 @@
     flex-direction: column;
     position: fixed;
     align-items: center;
+    z-index: 2;
 }
 .adminSidebar, .userSidebar{
     display: flex;
@@ -30,4 +31,21 @@
     background-color: white;
     color: rgb(69, 67, 67);
     transform: translate(0, -3px);
+}
+
+@media screen and (max-width: 500px) {
+    .tittle{
+        font-size: 30px;
+    }
+    .sideNav{
+        height: 350px;
+        width: 100%;
+    }
+    .sideLinks{
+        font-size: 15px;
+        padding: 10px;
+    }
+    .adminSidebar, .userSidebar{
+        padding:10px;
+    }
 }

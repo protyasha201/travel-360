@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     margin: 150px 0;
+    flex-direction: row;
 }
 
 .aboutImage{
@@ -47,4 +48,19 @@
 .findTourBtn:hover{
     transform: translate(0, -4px);
     box-shadow: 1px 1px 5px black;
+}
+
+@media screen and (max-width: 500px) {
+    .aboutSection{
+        flex-direction: column;
+        margin-top: 1300px;
+    }
+    .aboutImage{
+        width: 90%;
+        margin: 0% auto;
+    }
+    .aboutText{
+        width: 90%;
+        padding: 20px;
+    }
 }

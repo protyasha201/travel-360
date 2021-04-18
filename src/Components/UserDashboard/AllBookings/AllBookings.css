@@ -32,3 +32,12 @@
     align-items: center;
     justify-content: space-between;
 }
+
+@media screen  and (max-width: 500px) {
+    .allBookings{
+        margin-top: 400px;
+    }
+    .allBookingsMain{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

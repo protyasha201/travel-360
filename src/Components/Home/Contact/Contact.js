@@ -14,27 +14,27 @@ import { Link } from 'react-router-dom';
 const gallery = [
     {
         img: gallery1,
-        id:1
+        id: 1
     },
     {
         img: gallery2,
-        id:2
+        id: 2
     },
     {
         img: gallery3,
-        id:3
+        id: 3
     },
     {
         img: gallery4,
-        id:4
+        id: 4
     },
     {
         img: gallery5,
-        id:5
+        id: 5
     },
     {
         img: gallery6,
-        id:6
+        id: 6
     },
 ];
 
@@ -59,7 +59,6 @@ const Contact = () => {
                     <div className="servicesLinks">
                         <Link to="/" className="footerLinks" href="#">About Us</Link>
                         <Link to="/" className="footerLinks" href="#">How It Works</Link>
-                        <Link to="/" className="footerLinks" href="#">Our Blog</Link>
                         <Link to="/" className="footerLinks" href="#">Our Services</Link>
                         <Link to="/" className="footerLinks" href="#">Contact Us</Link>
                     </div>
@@ -68,7 +67,7 @@ const Contact = () => {
                     <h2>Gallery</h2>
                     <div className="photosContainer">
                         {
-                            gallery.map(photos => <img alt="gallery" key={photos.id} src={photos.img}/>)
+                            gallery.map(photos => <img alt="gallery" key={photos.id} src={photos.img} />)
                         }
                     </div>
                 </div>

@@ -1,6 +1,5 @@
 .bookingSection{
     display: flex;
-
 }
 .book{
     width: 70%;
@@ -30,4 +29,16 @@
     height: 40px;
     border:none;
     width: 400px;
+}
+
+@media screen  and (max-width: 500px) {
+    .bookingSection{
+        flex-direction: column;
+    }
+    .bookMain input{
+        width: 90%;
+    }
+    .book{
+        margin: 400px 0;
+    }
 }

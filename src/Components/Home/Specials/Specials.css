@@ -39,3 +39,17 @@
     color: rgb(70, 81, 198);
     box-shadow: 1px 1px 10px black;
 }
+
+@media screen and (max-width: 500px) {
+    .specialsContainer{
+        display: grid;
+        row-gap: 50px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .travelSpecials{
+        width: 80%;
+    }
+    .travelSpecials img{
+        height: 250px;
+    }
+}

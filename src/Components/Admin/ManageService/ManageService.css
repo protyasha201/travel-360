@@ -36,3 +36,15 @@
     margin-top: 10px;
     justify-content: space-around;
 }
+
+
+@media screen and (max-width: 500px) {
+    .manageService{
+        top: 400px;
+    }
+    .manageServiceContainer{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+    }
+}

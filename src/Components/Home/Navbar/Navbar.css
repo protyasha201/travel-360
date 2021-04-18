@@ -38,3 +38,16 @@ a{
 .links:hover{
     background-color: cornflowerblue;
 }
+
+@media screen and (max-width: 500px) {
+    .navBar{
+        flex-direction: column;
+    }
+    .headerIcon{
+        margin: 0% auto;
+    }
+    .navLinks{
+        width: 90%;
+        margin: 0% auto;
+    }
+}

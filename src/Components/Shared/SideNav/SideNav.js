@@ -21,11 +21,11 @@ const SideNav = () => {
                 <Link to="/dashboard/manageService" className="sideLinks"><FontAwesomeIcon icon={faEdit} />Manage Services</Link>
             </div>
             
-            <div className="userSidebar">
+            {/* <div className="userSidebar">
                 <Link to="/dashboard/bookTravel" className="sideLinks"><FontAwesomeIcon icon={faShoppingCart} />Book Now</Link>
                 <Link to="/dashboard/allBookings" className="sideLinks"><FontAwesomeIcon icon={faList} />All Bookings</Link>
                 <Link to="/dashboard/userReview" className="sideLinks"><FontAwesomeIcon icon={faCommentDots} />Review</Link>
-            </div>
+            </div> */}
         </aside>
     );
 };

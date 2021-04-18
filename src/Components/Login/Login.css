@@ -41,3 +41,19 @@
 .loginOption:hover{
     transform: translate(0, -3px);
 }
+
+@media screen and (max-width: 500px) {
+    .loginPage img {
+        display: none;
+    }
+    .loginForm{
+        width: 80%;
+        right: 0;
+        left: 0%;
+        margin: 0% auto;
+        height: 400px;
+    }
+    .loginPage{
+        flex-direction: column;
+    }
+}

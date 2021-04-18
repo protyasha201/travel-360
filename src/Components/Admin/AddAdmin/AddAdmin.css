@@ -42,3 +42,17 @@
     margin-left: 100px;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 500px) {
+    .addAdmin{
+        top: 400px;
+    }
+
+    .addAdminMain input{
+        width: 95%;
+    }
+    .addAdminBtn{
+        margin-top: 10px;
+        margin-left: 130px;
+    }
+}

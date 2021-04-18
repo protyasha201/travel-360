@@ -3,8 +3,15 @@ import './About.css';
 import girlImage from '../../../images/about-1.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { useHistory } from 'react-router';
 
 const About = () => {
+    const history = useHistory();
+
+    const findTours = () => {
+        history.push('/services');
+    }
+    
     return (
         <section className="aboutSection">
             <div className="aboutImage">
@@ -17,7 +24,7 @@ const About = () => {
                 <h3><FontAwesomeIcon icon={faCheck} />Ratione voluptatem.sequi nesciunt.</h3>
                 <h3><FontAwesomeIcon icon={faCheck} />Ratione voluptatem.</h3>
                 <h3><FontAwesomeIcon icon={faCheck} />Ratione voluptatem sequi.</h3>
-                <button className="findTourBtn">Find Tours</button>
+                <button onClick={findTours} className="findTourBtn">Find Tours</button>
             </div>
         </section>
     );
