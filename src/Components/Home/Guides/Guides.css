@@ -1,0 +1,28 @@
+.guidesSection{
+    margin: 250px 0;
+}
+
+.guides{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-self: center;
+    align-self: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.guidesContainer{
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    width: 200px;
+    box-shadow: 1px 1px 10px rgba(191, 191, 191, 0.483);
+    flex-direction: column;
+    padding: 10px;
+}
+
+.guidesContainer img{
+    width: 50%;
+    height: 100px;
+    border-radius: 50%;
+}
