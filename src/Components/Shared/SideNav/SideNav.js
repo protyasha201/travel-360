@@ -1,4 +1,4 @@
-import { faCommentDots, faEdit, faList, faPlus, faRoute, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCommentDots, faEdit, faHome, faList, faPlus, faRoute, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
@@ -14,18 +14,21 @@ const SideNav = () => {
                 <span className="text-coral">Travel</span>
                 <span className="text-white">360</span>
             </h1>
-            <div className="adminSidebar">
-                <Link to="/dashboard/orderList" className="sideLinks"><FontAwesomeIcon icon={faRoute} />Travel Bookings</Link>
+            {
+                user.isAdmin ? 
+                <div className="adminSidebar">
+                <Link to="/dashboard/orderList" className="sideLinks"><FontAwesomeIcon icon={faRoute} />Order List</Link>
                 <Link to="/dashboard/addService" className="sideLinks"><FontAwesomeIcon icon={faPlus} />Add Service</Link>
                 <Link to="/dashboard/addAdmin" className="sideLinks"><FontAwesomeIcon icon={faUser} />Make Admin</Link>
                 <Link to="/dashboard/manageService" className="sideLinks"><FontAwesomeIcon icon={faEdit} />Manage Services</Link>
             </div>
-            
-            {/* <div className="userSidebar">
+            :
+            <div className="userSidebar">
                 <Link to="/dashboard/bookTravel" className="sideLinks"><FontAwesomeIcon icon={faShoppingCart} />Book Now</Link>
                 <Link to="/dashboard/allBookings" className="sideLinks"><FontAwesomeIcon icon={faList} />All Bookings</Link>
                 <Link to="/dashboard/userReview" className="sideLinks"><FontAwesomeIcon icon={faCommentDots} />Review</Link>
-            </div> */}
+            </div>
+            }
         </aside>
     );
 };

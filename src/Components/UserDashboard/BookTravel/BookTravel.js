@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import PaymentProcess from '../../PaymentProcess/PaymentProcess';
 import './BookTravel.css';
 
-const BookTravel = () => {
+const BookTravel = ({id}) => {
+    // const { id } = useParams();
     const date = new Date().toDateString();
     const [user] = useContext(UserContext);
     const [newUser, setNewUser] = useState({ ...user });
@@ -15,7 +16,6 @@ const BookTravel = () => {
         userInfoUpdate[e.target.name] = e.target.value;
         setNewUser(userInfoUpdate);
     }
-    const { id } = useParams();
 
     useEffect(() => {
         fetch(`http://localhost:5000/bookTravel/${id}`)
@@ -25,6 +25,8 @@ const BookTravel = () => {
 
     const handleBooking = () => {
         const bookingInfo = { ...newUser, ...selectedTravel, date };
+        console.log(bookingInfo)
+        
         fetch('http://localhost:5000/bookings', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -45,11 +47,11 @@ const BookTravel = () => {
                 </div>
                 <div className="bookMain">
                     <p>Name</p>
-                    <input type="text" placeholder="Name..." name="name" defaultValue={user.name} onChange={handleChangeInfo} />
+                    <input type="text" placeholder="Name..." name="name" defaultValue={user.name} onBlur={handleChangeInfo} />
                     <p>Email</p>
-                    <input type="email" placeholder="Email..." name="email" defaultValue={user.email} />
+                    <input onBlur={handleChangeInfo} type="email" placeholder="Email..." name="email" defaultValue={user.email} />
                     <p>Booking Travel</p>
-                    <input onChange={handleChangeInfo} defaultValue={selectedTravel.title} placeholder="Travel to..." name="destination" type="text" />
+                    <input onBlur={handleChangeInfo} defaultValue={selectedTravel.title} placeholder="Travel to..." name="destination" type="text" />
 
                     <div style={{
                         marginTop: '50px',

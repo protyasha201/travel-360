@@ -23,7 +23,7 @@ const CardForm = (props) => {
         if (error) {
             console.log('[error]', error);
         } else {
-            console.log('[PaymentMethod]', paymentMethod);
+            // console.log('[PaymentMethod]', paymentMethod);
             handleBooking();
         }
     };

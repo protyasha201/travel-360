@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 import './Services.css';
 
 const Services = () => {
@@ -22,7 +22,7 @@ const Services = () => {
             <h2 className="text-center text-bluish">Travelling Services</h2>
             <div className="services">
                 {
-                    services.map(service => <div onClick={bookTravel} key={service._id} className="servicesContainer">
+                    services.map(service => <div onClick={() => bookTravel(service._id)} key={service._id} className="servicesContainer">
                         <div className="imageContainer">
                             <img src={service.imageUrl} />
                         </div>

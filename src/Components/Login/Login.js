@@ -7,7 +7,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './FirebaseConfig';
 import { UserContext } from '../../App';
-import { useHistory, useLocation } from 'react-router';
+import { useHistory, useLocation } from 'react-router-dom';
 
 
 const Login = () => {
@@ -18,10 +18,7 @@ const Login = () => {
         fetch('http://localhost:5000/admins')
         .then(res => res.json())
         .then(data => setAdmins(data))
-    },[])
-
-    // console.log(admins);
-    // console.log(user);
+    },[admins.email])
 
     let history = useHistory();
     let location = useLocation();
