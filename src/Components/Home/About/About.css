@@ -3,6 +3,8 @@
     justify-content: space-evenly;
     margin: 150px 0;
     flex-direction: row;
+    background-color: rgb(4, 4, 23);
+    padding: 50px;
 }
 
 .aboutImage{
@@ -27,11 +29,11 @@
 
 .aboutText h3{
     font-weight: 400;
-    color: rgb(57, 57, 64);
+    color: rgb(173, 173, 186);
 }
 
 .aboutText p{
-    color: rgb(103, 98, 98);
+    color: rgb(144, 138, 138);
 }
 
 .findTourBtn{
@@ -54,6 +56,7 @@
     .aboutSection{
         flex-direction: column;
         margin-top: 1300px;
+        padding: 20px;
     }
     .aboutImage{
         width: 90%;

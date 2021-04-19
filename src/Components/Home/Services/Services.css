@@ -4,6 +4,8 @@
     align-self: center;
     justify-items: center;
     row-gap: 50px;
+    background-color: rgba(196, 226, 194, 0.639);
+    padding: 30px;
 }
 
 .servicesSection {
@@ -17,6 +19,7 @@
     border-radius: 5px;
     transition: ease-out .3s all;
     cursor: pointer;
+    background-color: white;
 }
 .bookTravelBtn{
     background-color: coral;
