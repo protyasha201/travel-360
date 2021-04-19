@@ -7,7 +7,7 @@ const OrderList = () => {
     const [user] = useContext(UserContext);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orderedBookings')
+        fetch('https://fast-sands-57778.herokuapp.com/orderedBookings')
             .then(res => res.json())
             .then(data => setOrderedBookings(data))
     }, [])

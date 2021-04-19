@@ -15,7 +15,7 @@ const AddAdmin = () => {
         setAdmin(adminInfo)
     }
     const addAdmin = () => {
-        fetch('http://localhost:5000/addAdmins', {
+        fetch('https://fast-sands-57778.herokuapp.com/addAdmins', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(admin)

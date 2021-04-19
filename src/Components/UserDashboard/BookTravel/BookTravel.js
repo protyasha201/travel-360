@@ -16,7 +16,7 @@ const BookTravel = ({id}) => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/bookTravel/${id}`)
+        fetch(`https://fast-sands-57778.herokuapp.com/bookTravel/${id}`)
             .then(res => res.json())
             .then(data => setSelectedTravel(data))
     }, [id])
@@ -24,7 +24,7 @@ const BookTravel = ({id}) => {
     const handleBooking = paymentMethod => {
         const bookingInfo = { ...newUser, ...selectedTravel, date, paymentMethod };
         
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://fast-sands-57778.herokuapp.com/bookings', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(bookingInfo)

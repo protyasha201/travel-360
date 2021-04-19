@@ -19,7 +19,7 @@ const Review = () => {
     }
 
     const submitReview = () => {
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://fast-sands-57778.herokuapp.com/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(reviews)

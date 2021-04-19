@@ -39,7 +39,7 @@ const AddService = () => {
 
     const addService = e => {
         console.log(newService);
-        fetch('http://localhost:5000/addService', {
+        fetch('https://fast-sands-57778.herokuapp.com/addService', {
             method: 'POST',
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify(newService)
