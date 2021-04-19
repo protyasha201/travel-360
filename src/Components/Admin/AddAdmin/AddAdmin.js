@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { UserContext } from '../../../App';
 import './AddAdmin.css';
 
 const AddAdmin = () => {
+    const [user] = useContext(UserContext);
+
     const [admin, setAdmin] = useState({
         email: '',
     })
@@ -27,7 +30,7 @@ const AddAdmin = () => {
             <div className="addAdmin">
                 <div className="addAdminHeader">
                     <h1>Add Admin</h1>
-                    <h1>Sufi Ahmed</h1>
+                    <h1>{user.name}</h1>
                 </div>
                 <div className="addAdminMain">
                     <p>Email</p>

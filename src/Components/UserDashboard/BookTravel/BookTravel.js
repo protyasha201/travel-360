@@ -1,11 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import PaymentProcess from '../../PaymentProcess/PaymentProcess';
 import './BookTravel.css';
 
 const BookTravel = ({id}) => {
-    // const { id } = useParams();
     const date = new Date().toDateString();
     const [user] = useContext(UserContext);
     const [newUser, setNewUser] = useState({ ...user });
@@ -23,9 +21,8 @@ const BookTravel = ({id}) => {
             .then(data => setSelectedTravel(data))
     }, [id])
 
-    const handleBooking = () => {
-        const bookingInfo = { ...newUser, ...selectedTravel, date };
-        console.log(bookingInfo)
+    const handleBooking = paymentMethod => {
+        const bookingInfo = { ...newUser, ...selectedTravel, date, paymentMethod };
         
         fetch('http://localhost:5000/bookings', {
             method: 'POST',
@@ -37,7 +34,7 @@ const BookTravel = ({id}) => {
 
         alert('Booking Complete');
     }
-
+    
     return (
         <section className="bookingSection">
             <div className="book">

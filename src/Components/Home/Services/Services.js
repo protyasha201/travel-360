@@ -24,7 +24,7 @@ const Services = () => {
                 {
                     services.map(service => <div onClick={() => bookTravel(service._id)} key={service._id} className="servicesContainer">
                         <div className="imageContainer">
-                            <img src={service.imageUrl} />
+                            <img alt={service.title} src={service.imageUrl} />
                         </div>
                         <h1>{service.title}</h1>
                         <p>{service.description}</p>

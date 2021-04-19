@@ -12,6 +12,7 @@ const OrderList = () => {
             .then(data => setOrderedBookings(data))
     }, [])
 
+
     return (
         <section className="orderList">
             <div className="orders">
@@ -32,11 +33,11 @@ const OrderList = () => {
                             <h4>{bookings.name}</h4>
                             <h4>{bookings.email}</h4>
                             <h4>{bookings.title}</h4>
-                            <h4>Credit</h4>
+                            <h4>{bookings.paymentMethod.card.brand}</h4>
                             <select className="selectStatus">
-                                <option name="pending">Pending</option>
-                                <option name="Done">Done</option>
-                                <option name="onGoing">On going</option>
+                                <option>Pending</option>
+                                <option name="Done" >Done</option>
+                                <option name="onGoing" >On going</option>
                             </select>
                         </div>)
                     }

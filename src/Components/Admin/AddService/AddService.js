@@ -1,10 +1,13 @@
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { UserContext } from '../../../App';
 import './AddService.css';
 
 const AddService = () => {
+    const [user] = useContext(UserContext);
+    
     const [newService, setNewService] = useState({
         title: '',
         price: null,
@@ -53,7 +56,7 @@ const AddService = () => {
             <div className="addService">
                 <div className="bookHeader">
                     <h1>Add Service</h1>
-                    <h1>Sufi Ahmed</h1>
+                    <h1>{user.name}</h1>
                 </div>
                 <form onSubmit={addService} className="addServiceMain">
                     <p>Service Tittle</p>

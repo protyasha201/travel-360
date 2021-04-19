@@ -17,7 +17,7 @@ const Testimonials = () => {
                 {
                     reviews.map(review =>
                         <div key={review._id} className="testimonialsContainer">
-                            <img src={review.imgUrl} />
+                            <img alt={review.name} src={review.imgUrl} />
                             <h1 className="text-grey">{review.name}</h1>
                             <p>{review.description}</p>
                         </div>)

@@ -7,6 +7,7 @@ import Home from './Components/Home/Home/Home';
 import Services from './Components/Home/Services/Services';
 import Login from './Components/Login/Login';
 import PrivateRoute from './Components/Login/PrivateRoute';
+import PaymentProcess from './Components/PaymentProcess/PaymentProcess';
 
 export const UserContext = createContext([]);
 
@@ -25,6 +26,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/payment">
+            <PaymentProcess />
           </Route>
           <Route path="/login">
             <Login />

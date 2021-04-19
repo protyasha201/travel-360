@@ -24,7 +24,7 @@ const CardForm = (props) => {
             console.log('[error]', error);
         } else {
             // console.log('[PaymentMethod]', paymentMethod);
-            handleBooking();
+            handleBooking(paymentMethod);
         }
     };
 
