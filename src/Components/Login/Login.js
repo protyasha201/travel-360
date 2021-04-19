@@ -44,11 +44,12 @@ const Login = () => {
 
                 const admin = admins.filter(admin => newUser.email === admin.email);
 
-                if(admin[0].email === newUser.email) {
-                    userInfoUpdate.isAdmin = true;
-                }
-                else{
+                if(admin[0] === undefined) {
                     userInfoUpdate.isAdmin = false;
+                }
+
+                else {
+                    userInfoUpdate.isAdmin = true;
                 }
 
                 setUser(userInfoUpdate);
