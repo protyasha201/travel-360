@@ -19,4 +19,5 @@ This is a travel management website.Find Your destination and book for that dest
   <li>Backend hosted with Heroku</li>
   <li>Used Stripe payment gateway</li>
   <li>Reviews are showed dynamically on home page</li>
+  <li>Responsive</li>
 </ul>
